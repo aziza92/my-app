@@ -1,0 +1,64 @@
+{
+    "cells": [
+        {
+            "id": 1, 
+            "title": "Intro to React",
+            "image": "https://cl.ly/1U1F170x3D0L/download/logo-react-small.png"
+        },
+        {
+            "id": 2,
+            "title": "Basic Styling in CSS",
+            "image": "https://cl.ly/1U1F170x3D0L/download/logo-react-small.png"
+        },
+        {
+            "id": 3,
+            "title": "Adaptive Layout with CSS Grid",
+            "image": "https://cl.ly/1U1F170x3D0L/download/logo-react-small.png"
+        },
+        {
+            "id": 4,
+            "title": "Interactions and Animations",
+            "image": "https://cl.ly/1U1F170x3D0L/download/logo-react-small.png"
+        },
+        {
+            "id": 5,
+            "title": "SVG Animation",
+            "image": "https://cl.ly/1U1F170x3D0L/download/logo-react-small.png"
+        },
+        {
+            "id": 6,
+            "title": "Components and Props",
+            "image": "https://cl.ly/1U1F170x3D0L/download/logo-react-small.png"
+        },
+        {
+            "id": 7,
+            "title": "States and Events",
+            "image": "https://cl.ly/1U1F170x3D0L/download/logo-react-small.png"
+        },
+        {
+            "id": 8,
+            "title": "Styled Components",
+            "image": "https://cl.ly/1U1F170x3D0L/download/logo-react-small.png"
+        },
+        {
+            "id": 9,
+            "title": "Static Data with JSON",
+            "image": "https://cl.ly/1U1F170x3D0L/download/logo-react-small.png"
+        },
+        {
+            "id": 10,
+            "title": "GraphQL with Contentful",
+            "image": "https://cl.ly/1U1F170x3D0L/download/logo-react-small.png"
+        },
+        {
+            "id": 11,
+            "title": "Publish to Netlify",
+            "image": "https://cl.ly/1U1F170x3D0L/download/logo-react-small.png"
+        },
+        {
+            "id": 12,
+            "title": "Payment with Stripe Checkout",
+            "image": "https://cl.ly/1U1F170x3D0L/download/logo-react-small.png"
+        }
+    ]
+}

@@ -1,15 +1,9 @@
-/**
- * Layout component that queries for data
- * with Gatsby's useStaticQuery component
- *
- * See: https://www.gatsbyjs.com/docs/how-to/querying-data/use-static-query/
- */
-
-import * as React from "react"
+import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
-
+//import { Helmet } from "react-helmet"
 import Header from "./header"
-import "./layout.css"
+import Footer from "./footer"
+import "../css/layout.css"
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -17,34 +11,42 @@ const Layout = ({ children }) => {
       site {
         siteMetadata {
           title
+          description
+          keywords
+        }
+      }
+      allContentfulLink(sort: { fields: [createdAt], order: ASC }) {
+        edges {
+          node {
+            title
+            url
+            createdAt
+          }
         }
       }
     }
   `)
 
   return (
-    <>
-      <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
-      <div
-        style={{
-          margin: `0 auto`,
-          maxWidth: `var(--size-content)`,
-          padding: `var(--size-gutter)`,
-        }}
-      >
-        <main>{children}</main>
-        <footer
-          style={{
-            marginTop: `var(--space-5)`,
-            fontSize: `var(--font-sm)`,
-          }}
-        >
-          © {new Date().getFullYear()} &middot; Built with
-          {` `}
-          <a href="https://www.gatsbyjs.com">Gatsby</a>
-        </footer>
-      </div>
-    </>
+    <div>
+      <meta
+        title={data.site.siteMetadata.title}
+        meta={[
+          {
+            name: "description",
+            content: data.site.siteMetadata.description,
+          },
+          { name: "keywords", content: data.site.siteMetadata.keywords },
+        ]}
+      />
+      <Header />
+      {children}
+      <Footer data={data.allContentfulLink.edges}>
+        Backgrounds made in Cinema 4D, iOS app in Swift, site in React.{" "}
+        <a href="mailto:support@designcode.io">Email us</a> to ask anything. ©
+        2023
+      </Footer>
+    </div>
   )
 }
 

@@ -1,20 +1,25 @@
 /**
- * Configure your Gatsby site with this file.
- *
- * See: https://www.gatsbyjs.com/docs/reference/config-files/gatsby-config/
- */
-
-/**
  * @type {import('gatsby').GatsbyConfig}
  */
+
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
-    siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`,
+    title: `Coding with Aziza`,
+    description: `Complete Code, best tools and design systems.Prototype and build apps with React and React Native. `,
+    keywords:
+      "react course, react for designers, ios development, sketch app, swift app course, arkit 2, after effects, create sketch plugin",
+    author: `@Aziza`,
   },
   plugins: [
+    // Gatsby-Source-Contentful plugins ::::
+    {
+      resolve: `gatsby-source-contentful`,
+      options: {
+        spaceId: `w5uzom0ays5o`,
+        accessToken: "xDxbxH3-P6EjPxEBINEFJSESgmskpyJb1r4Dei4S6Io",
+      },
+    },
+
     `gatsby-plugin-image`,
     {
       resolve: `gatsby-source-filesystem`,
